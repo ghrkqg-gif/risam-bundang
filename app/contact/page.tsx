@@ -76,9 +76,10 @@ export default function ContactPage() {
                   <label htmlFor="time" className="block text-sm font-bold text-primary mb-2">희망 상담 시간대</label>
                   <select id="time" name="time" value={formData.time} onChange={handleChange} className="w-full p-3 bg-surface/30 border border-surface rounded-lg focus:outline-none focus:border-accent">
                     <option value="">선택해주세요</option>
-                    <option value="morning">오전 (10시~13시)</option>
-                    <option value="afternoon">오후 (14시~17시)</option>
-                    <option value="evening">저녁 (17시~20시)</option>
+                    <option value="morning">오전 (11시~14시)</option>
+                    <option value="afternoon">오후 (15시~18시)</option>
+                    <option value="evening">저녁 (18시~21시)</option>
+                    <option value="saturday">토요일 (09시~15시)</option>
                   </select>
                 </div>
               </div>
@@ -106,11 +107,14 @@ export default function ContactPage() {
               <p className="text-white/80 mb-8 leading-relaxed">온라인 상담 예약이 번거로우신가요? 전화나 카카오톡으로 바로 연락 주시면 친절하게 안내해 드립니다.</p>
               
               <div className="space-y-4">
-                <a href="tel:031-123-4567" className="block w-full py-4 text-center border border-accent/50 text-accent hover:bg-accent hover:text-primary transition-colors rounded-lg font-bold">
-                  전화 문의 (031-123-4567)
+                <a href="tel:031-713-2784" className="block w-full py-4 text-center border border-accent/50 text-accent hover:bg-accent hover:text-primary transition-colors rounded-lg font-bold">
+                  전화 문의 (031-713-2784)
                 </a>
-                <a href="#" className="block w-full py-4 text-center bg-[#FEE500] text-[#391B1B] hover:brightness-95 transition-all rounded-lg font-bold">
-                  카카오톡 문의하기
+                <a href="sms:01098772784" className="block w-full py-3 text-center border border-accent/30 text-accent/80 hover:bg-accent/10 transition-colors rounded-lg font-medium text-sm">
+                  문자 문의 (010-9877-2784)
+                </a>
+                <a href="https://pf.kakao.com/_resambd" target="_blank" rel="noopener noreferrer" className="block w-full py-4 text-center bg-[#FEE500] text-[#391B1B] hover:brightness-95 transition-all rounded-lg font-bold">
+                  카카오톡 문의하기 (@resambd)
                 </a>
               </div>
             </div>
@@ -118,9 +122,10 @@ export default function ContactPage() {
             <div className="bg-white p-8 rounded-2xl border border-surface text-center">
               <h4 className="font-bold text-primary mb-2">진료시간</h4>
               <p className="text-sm text-textsub leading-relaxed">
-                평일 10:00 - 20:00<br/>
-                토요일 10:00 - 15:00<br/>
-                일요일 및 공휴일 휴진
+                평일 11:00 - 21:00<br/>
+                <span className="text-xs text-textsub/60">(점심 14:00 - 15:00)</span><br/>
+                토요일 09:00 - 15:00<br/>
+                일요일 휴진 / 공휴일 진료
               </p>
             </div>
           </div>

@@ -31,10 +31,11 @@ export default function Footer() {
           <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4">연락처 & 진료시간</h4>
             <ul className="flex flex-col gap-2 text-sm text-surface/80">
-              <li>T. 031-123-4567</li>
-              <li>평일 10:00 - 20:00</li>
-              <li>토요일 10:00 - 15:00</li>
-              <li>일요일 및 공휴일 휴진</li>
+              <li>T. 031-713-2784</li>
+              <li>문자. 010-9877-2784</li>
+              <li>평일 11:00 - 21:00 (점심 14:00-15:00)</li>
+              <li>토요일 09:00 - 15:00</li>
+              <li>일요일 휴진 / 공휴일 진료</li>
             </ul>
           </div>
 
@@ -48,7 +49,7 @@ export default function Footer() {
               <a href="https://www.youtube.com/@hanbang119" target="_blank" rel="noopener noreferrer" className="p-2 bg-surface/10 rounded-full hover:bg-accent hover:text-primary transition-colors">
                 <Youtube size={20} />
               </a>
-              <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-accent hover:text-primary transition-colors">
+              <a href="https://pf.kakao.com/_resambd" target="_blank" rel="noopener noreferrer" className="p-2 bg-surface/10 rounded-full hover:bg-accent hover:text-primary transition-colors">
                 <MessageCircle size={20} />
               </a>
               <a href="#" className="p-2 bg-surface/10 rounded-full hover:bg-accent hover:text-primary transition-colors">
@@ -61,9 +62,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-surface/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-surface/60">
           <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
-            <span>사업자등록번호: 123-45-67890</span>
-            <span>대표자: 강기림</span>
-            <span>주소: 경기 성남시 분당구 성남대로 345 123</span>
+            <span>대표원장: 강기림</span>
+            <span>원장: 정샘</span>
+            <span>주소: 경기도 성남시 분당구 성남대로 345 정자역프라자 707호</span>
           </div>
           <p>© 2026 리샘한의원 분당점. All rights reserved.</p>
         </div>
