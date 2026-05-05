@@ -23,23 +23,51 @@ export default function AboutPage() {
       {/* Greeting */}
       <section className="py-24 bg-background">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=1200&q=80"
-                alt="원장 인사말"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <SectionTitle eyebrow="Greeting" title="건강한 피부는\n건강한 몸에서 시작됩니다" align="left" className="mb-8" />
-              <div className="space-y-4 text-textsub leading-relaxed">
-                <p>안녕하세요. 리샘한의원 분당점 대표원장입니다.</p>
-                <p>우리의 피부는 몸 안의 오장육부의 거울입니다. 겉으로 드러나는 증상만을 쫓는 치료는 일시적일 뿐입니다. 체질을 개선하고 근본을 바로잡아야 진짜 피부 미인이 될 수 있습니다.</p>
-                <p>저희 리샘한의원 분당점은 20년의 임상 노하우를 바탕으로, 한 분 한 분의 체질과 피부 상태에 맞는 가장 자연스럽고 안전한 한방 피부 솔루션을 제공합니다.</p>
+          <SectionTitle eyebrow="Greeting" title={`건강한 피부는\n건강한 몸에서 시작됩니다`} className="mb-16" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+
+            {/* 강기림 대표원장 */}
+            <div className="flex flex-col items-center text-center bg-white rounded-2xl border border-surface shadow-sm overflow-hidden group">
+              <div className="relative w-full bg-surface overflow-hidden" style={{ height: '420px' }}>
+                <Image
+                  src="/images/doctor-kang.jpg"
+                  alt="강기림 대표원장"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: '30% top' }}
+                />
+              </div>
+              <div className="p-8">
+                <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-1">Chief Director</p>
+                <h3 className="text-2xl font-serif font-bold text-primary mb-1">강기림</h3>
+                <p className="text-sm text-textsub/70 mb-4">대표원장</p>
+                <p className="text-sm text-textsub leading-relaxed">
+                  우리의 피부는 몸 안의 오장육부의 거울입니다. 체질을 개선하고 근본을 바로잡아야 진짜 피부 미인이 될 수 있습니다. 20년의 임상 노하우로 한 분 한 분께 맞춤 솔루션을 제공합니다.
+                </p>
               </div>
             </div>
+
+            {/* 정샘 원장 */}
+            <div className="flex flex-col items-center text-center bg-white rounded-2xl border border-surface shadow-sm overflow-hidden group">
+              <div className="relative w-full bg-surface overflow-hidden" style={{ height: '420px' }}>
+                <Image
+                  src="/images/doctor-jung.jpg"
+                  alt="정샘 원장"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ objectPosition: 'center 15%' }}
+                />
+              </div>
+              <div className="p-8">
+                <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-1">Director</p>
+                <h3 className="text-2xl font-serif font-bold text-primary mb-1">정샘</h3>
+                <p className="text-sm text-textsub/70 mb-4">원장</p>
+                <p className="text-sm text-textsub leading-relaxed">
+                  한방의 자연스럽고 안전한 접근으로 피부 고민을 근본부터 해결합니다. 섬세한 진단과 따뜻한 진료로 환자 한 분 한 분께 최선을 다하겠습니다.
+                </p>
+              </div>
+            </div>
+
           </div>
         </Container>
       </section>

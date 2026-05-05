@@ -6,7 +6,7 @@ import Button from '@/components/ui/Button';
 import { Copy, MapPin, Phone, Clock, TrainFront, Bus, Car } from 'lucide-react';
 
 export default function LocationPage() {
-  const address = "경기 성남시 분당구 성남대로 345 123 리샘빌딩 3층";
+  const address = "경기도 성남시 분당구 성남대로 345 정자역프라자 707호";
 
   const copyAddress = () => {
     navigator.clipboard.writeText(address);
@@ -40,26 +40,38 @@ export default function LocationPage() {
             <ul className="space-y-3 text-textsub">
               <li className="flex justify-between border-b border-surface pb-2">
                 <span>평일</span>
-                <span className="font-medium text-primary">10:00 - 20:00</span>
+                <span className="font-medium text-primary">11:00 - 21:00</span>
+              </li>
+              <li className="flex justify-between border-b border-surface pb-2">
+                <span className="text-textsub/70 text-sm pl-2">└ 점심시간</span>
+                <span className="text-textsub/70 text-sm">14:00 - 15:00</span>
               </li>
               <li className="flex justify-between border-b border-surface pb-2">
                 <span>토요일</span>
-                <span className="font-medium text-primary">10:00 - 15:00</span>
+                <span className="font-medium text-primary">09:00 - 15:00</span>
               </li>
-              <li className="flex justify-between text-accent">
-                <span>일요일 / 공휴일</span>
+              <li className="flex justify-between border-b border-surface pb-2 text-accent">
+                <span>일요일</span>
                 <span>휴진</span>
+              </li>
+              <li className="flex justify-between">
+                <span>공휴일</span>
+                <span className="font-medium text-primary">진료</span>
               </li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <a href="tel:031-123-4567" className="flex items-center justify-center gap-3 w-full p-6 bg-white border border-surface rounded-2xl shadow-sm hover:border-accent hover:text-accent transition-colors text-lg font-bold text-primary">
+            <a href="tel:031-713-2784" className="flex items-center justify-center gap-3 w-full p-6 bg-white border border-surface rounded-2xl shadow-sm hover:border-accent hover:text-accent transition-colors text-lg font-bold text-primary">
               <Phone size={24} />
-              031-123-4567
+              031-713-2784
             </a>
-            <a href="#" className="flex items-center justify-center gap-3 w-full p-6 bg-[#FEE500] rounded-2xl shadow-sm hover:brightness-95 transition-all text-lg font-bold text-[#391B1B]">
-              카카오톡 상담
+            <a href="sms:01098772784" className="flex items-center justify-center gap-3 w-full p-4 bg-white border border-surface rounded-2xl shadow-sm hover:border-accent hover:text-accent transition-colors font-bold text-primary">
+              <Phone size={20} />
+              문자 010-9877-2784
+            </a>
+            <a href="https://pf.kakao.com/_resambd" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 w-full p-6 bg-[#FEE500] rounded-2xl shadow-sm hover:brightness-95 transition-all text-lg font-bold text-[#391B1B]">
+              카카오톡 상담 (@resambd)
             </a>
           </div>
         </div>
@@ -71,14 +83,14 @@ export default function LocationPage() {
               <div className="p-2 bg-surface rounded-full"><TrainFront size={24} /></div>
               <h4 className="font-bold text-lg text-primary">지하철</h4>
             </div>
-            <p className="text-textsub leading-relaxed">분당선 서현역 5번 출구<br />도보 5분 거리 위치</p>
+            <p className="text-textsub leading-relaxed">신분당선 정자역 4번 출구<br />도보 3분 거리 위치</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-surface shadow-sm">
             <div className="flex items-center gap-3 text-accent mb-4">
               <div className="p-2 bg-surface rounded-full"><Bus size={24} /></div>
               <h4 className="font-bold text-lg text-primary">버스</h4>
             </div>
-            <p className="text-textsub leading-relaxed">서현역 정류장 하차<br />광역 1005-1, 1150, 1500-2</p>
+            <p className="text-textsub leading-relaxed">정자역 정류장 하차<br />광역 1005-1, 1116, 1550</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-surface shadow-sm">
             <div className="flex items-center gap-3 text-accent mb-4">
