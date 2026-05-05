@@ -68,7 +68,7 @@ export async function fetchChannelVideos(): Promise<YoutubeVideoData[]> {
           item.snippet.thumbnails.maxres?.url ??
           item.snippet.thumbnails.high?.url ??
           item.snippet.thumbnails.medium?.url ??
-          `https://img.youtube.com/vi/${item.id}/hqdefault.jpg`,
+          `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`,
         viewCount,
         viewCountLabel: formatViewCount(viewCount),
         publishedAt: item.snippet.publishedAt,
