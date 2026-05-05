@@ -2,17 +2,15 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ExternalLink, PlayCircle } from 'lucide-react';
+import { ExternalLink, PlayCircle, Youtube } from 'lucide-react';
 import Container from '../ui/Container';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
 import { blogPosts } from '@/lib/data/blog';
-import { videos } from '@/lib/data/youtube';
+import { channelInfo } from '@/lib/data/youtube';
 
 export default function ContentPreview() {
   const recentBlogs = blogPosts.slice(0, 3);
-  const mainVideo = videos[0];
 
   return (
     <section className="py-24 bg-background">
@@ -72,40 +70,44 @@ export default function ContentPreview() {
           {/* Right: YouTube */}
           <div>
             <div className="flex items-end justify-between mb-8">
-              <SectionTitle eyebrow="YouTube" title="리샘 TV" align="left" />
+              <SectionTitle eyebrow="YouTube" title="이번생은 건생TV" align="left" />
               <Button href="/youtube" variant="outline" size="sm" className="hidden sm:inline-flex">
                 채널 가기
               </Button>
             </div>
 
-            <motion.div
+            <motion.a
+              href={channelInfo.channelUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-2xl overflow-hidden bg-surface group"
+              className="group flex flex-col rounded-2xl overflow-hidden border border-surface bg-white shadow-sm hover:shadow-md hover:border-accent transition-all"
             >
-              <div className="aspect-video relative">
-                <Image
-                  src={mainVideo.thumbnail}
-                  alt={mainVideo.title}
-                  fill
-                  unoptimized
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                  <PlayCircle size={64} className="text-white opacity-80 group-hover:opacity-100 transition-opacity" />
+              {/* 채널 배너 */}
+              <div className="aspect-video bg-gradient-to-br from-primary to-secondary flex flex-col items-center justify-center gap-4 text-background">
+                <div className="p-4 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                  <Youtube size={48} className="text-white" />
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-white">{channelInfo.name}</p>
+                  <p className="text-sm text-white/70 mt-1">{channelInfo.handle}</p>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-accent/90 text-primary rounded-full text-sm font-bold group-hover:bg-accent transition-colors">
+                  <PlayCircle size={16} />
+                  채널 방문하기
                 </div>
               </div>
-              <div className="p-6 bg-white border border-t-0 border-surface rounded-b-2xl">
-                <h3 className="text-lg font-bold text-primary mb-2 line-clamp-1">{mainVideo.title}</h3>
-                <span className="text-sm text-textsub/60">{mainVideo.date}</span>
+              {/* 설명 */}
+              <div className="p-6">
+                <p className="text-sm text-textsub leading-relaxed line-clamp-2">
+                  {channelInfo.description}
+                </p>
               </div>
-              <Link href="/youtube" className="absolute inset-0 z-10">
-                <span className="sr-only">비디오 보기</span>
-              </Link>
-            </motion.div>
-            
+            </motion.a>
+
             <div className="mt-6 sm:hidden">
               <Button href="/youtube" variant="outline" className="w-full">채널 가기</Button>
             </div>
